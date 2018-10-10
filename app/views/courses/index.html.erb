@@ -5,10 +5,15 @@
 <table>
   <thead>
     <tr>
+      <th>Type</th>
       <th>Id</th>
+      <th>Term</th>
+      <th>Code</th>
+      <th>Continuity</th>
       <th>Name</th>
-      <th>Prerequisites</th>
-      <th>About</th>
+      <th>Description</th>
+      <th>Credits</th>
+      <th>Independent study</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +21,15 @@
   <tbody>
     <% @courses.each do |course| %>
       <tr>
+        <td><%= course.type %></td>
         <td><%= course.id %></td>
+        <td><%= course.term %></td>
+        <td><%= course.code %></td>
+        <td><%= course.continuity_id %></td>
         <td><%= course.name %></td>
-        <td><%= course.prerequisites %></td>
-        <td><%= course.about %></td>
+        <td><%= course.description %></td>
+        <td><%= course.credits %></td>
+        <td><%= course.independent_study %></td>
         <td><%= link_to 'Show', course %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
         <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>

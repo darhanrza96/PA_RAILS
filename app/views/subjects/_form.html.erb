@@ -12,8 +12,23 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type %>
+  </div>
+
+  <div class="field">
     <%= form.label :id %>
     <%= form.text_field :id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_field :comment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :term %>
+    <%= form.text_field :term %>
   </div>
 
   <div class="field">
@@ -22,13 +37,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :abbreviation %>
-    <%= form.text_field :abbreviation %>
-  </div>
-
-  <div class="field">
-    <%= form.label :segments %>
-    <%= form.text_field :segments %>
+    <%= form.label :abbreveation %>
+    <%= form.text_field :abbreveation %>
   </div>
 
   <div class="actions">

@@ -1,8 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Type:</strong>
+  <%= @subject.type %>
+</p>
+
+<p>
   <strong>Id:</strong>
   <%= @subject.id %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @subject.comment %>
+</p>
+
+<p>
+  <strong>Term:</strong>
+  <%= @subject.term %>
 </p>
 
 <p>
@@ -11,13 +26,8 @@
 </p>
 
 <p>
-  <strong>Abbreviation:</strong>
-  <%= @subject.abbreviation %>
-</p>
-
-<p>
-  <strong>Segments:</strong>
-  <%= @subject.segments %>
+  <strong>Abbreveation:</strong>
+  <%= @subject.abbreveation %>
 </p>
 
 <%= link_to 'Edit', edit_subject_path(@subject) %> |

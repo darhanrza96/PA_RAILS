@@ -14,10 +14,12 @@ class SubjectsTest < ApplicationSystemTestCase
     visit subjects_url
     click_on "New Subject"
 
-    fill_in "Abbreviation", with: @subject.abbreviation
+    fill_in "Abbreveation", with: @subject.abbreveation
+    fill_in "Comment", with: @subject.comment
     fill_in "Id", with: @subject.id
     fill_in "Name", with: @subject.name
-    fill_in "Segments", with: @subject.segments
+    fill_in "Term", with: @subject.term
+    fill_in "Type", with: @subject.type
     click_on "Create Subject"
 
     assert_text "Subject was successfully created"
@@ -28,10 +30,12 @@ class SubjectsTest < ApplicationSystemTestCase
     visit subjects_url
     click_on "Edit", match: :first
 
-    fill_in "Abbreviation", with: @subject.abbreviation
+    fill_in "Abbreveation", with: @subject.abbreveation
+    fill_in "Comment", with: @subject.comment
     fill_in "Id", with: @subject.id
     fill_in "Name", with: @subject.name
-    fill_in "Segments", with: @subject.segments
+    fill_in "Term", with: @subject.term
+    fill_in "Type", with: @subject.type
     click_on "Update Subject"
 
     assert_text "Subject was successfully updated"

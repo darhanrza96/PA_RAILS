@@ -12,8 +12,28 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type %>
+  </div>
+
+  <div class="field">
     <%= form.label :id %>
     <%= form.text_field :id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :term %>
+    <%= form.text_field :term %>
+  </div>
+
+  <div class="field">
+    <%= form.label :code %>
+    <%= form.text_field :code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :continuity_id %>
+    <%= form.text_field :continuity_id %>
   </div>
 
   <div class="field">
@@ -22,13 +42,18 @@
   </div>
 
   <div class="field">
-    <%= form.label :prerequisites %>
-    <%= form.text_field :prerequisites %>
+    <%= form.label :description %>
+    <%= form.text_field :description %>
   </div>
 
   <div class="field">
-    <%= form.label :about %>
-    <%= form.text_field :about %>
+    <%= form.label :credits %>
+    <%= form.text_field :credits %>
+  </div>
+
+  <div class="field">
+    <%= form.label :independent_study %>
+    <%= form.check_box :independent_study %>
   </div>
 
   <div class="actions">
