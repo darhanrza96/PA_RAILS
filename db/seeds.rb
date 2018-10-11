@@ -16,3 +16,25 @@ JSON.parse(File.open('db/course.json').read).each do |row|
 end
 
 Course.import columns, courses, validate: false
+
+
+subjects = []
+columns1 = [:name, :abbreviation, :term]
+
+
+JSON.parse(File.open('db/subject.json').read).each do |row|
+  subjects << Subject.new(name: row['name'], abbreviation: row['abbreviation'], term: row['term'])
+end
+
+Subject.import columns1, subjects, validate: false
+
+
+instructors = []
+columns2 = [:first, :middle, :last ,:email]
+
+
+JSON.parse(File.open('db/instructor.json').read).each do |row|
+  instructors << Instructor.new(first: row['first'], middle: row['middle'], last: row['last'], email: row['email'])
+end
+
+Instructor.import columns2, instructors, validate: false
