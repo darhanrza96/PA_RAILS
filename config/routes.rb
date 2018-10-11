@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :subjects
-  resources :instructors
   resources :courses
   #get 'static_pages/home'
   #resources :user
