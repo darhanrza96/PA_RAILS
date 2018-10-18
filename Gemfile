@@ -12,6 +12,7 @@ gem 'bootsnap',     '1.3.2'
 gem 'bootstrap-sass', '3.3.7'
 gem 'pg', '1.1.3'
 gem 'json'
+gem 'bcrypt'
 gem 'activerecord-import'
 
 
