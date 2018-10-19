@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
   resources :instructors
   resources :subjects
   resources :courses
@@ -8,13 +9,17 @@ Rails.application.routes.draw do
   #root 'application#hello'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  root 'static_pages#home'
+  #root 'static_pages#home'
+  root 'users#new'
 
   get  '/subjects',    to: 'static_pages#subjects'
   get  '/courses',   to: 'static_pages#courses'
   get  '/instructors', to: 'static_pages#instructors'
   get  '/signup',  to: 'users#new'
   post '/signup',  to: 'users#create'
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
 
   resources :users
 end
