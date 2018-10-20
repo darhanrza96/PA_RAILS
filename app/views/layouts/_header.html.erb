@@ -3,9 +3,10 @@
     <%= link_to "Course Catalog", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        
+
         <% if logged_in? %>
-          <li><%= link_to "Users", '#' %></li>
+          <!-- <li><%= link_to "Users", '#' %></li> -->
+          <li><%= link_to "Search",   search_path %></li>
           <li><%= link_to "Subjects",   subjects_path %></li>
           <li><%= link_to "Courses",    courses_path %></li>
           <li><%= link_to "Instructors", instructors_path %></li>

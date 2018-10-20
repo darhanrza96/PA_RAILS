@@ -8,11 +8,11 @@
 require 'json'
 
 courses = []
-columns = [:code, :name, :description]
+columns = [:id, :code, :name, :description, :subjects]
 
 
 JSON.parse(File.open('db/course.json').read).each do |row|
-  courses << Course.new(code: row['code'], name: row['name'], description: row['description'])
+  courses << Course.new(id: row['id'], code: row['code'], name: row['name'], description: row['description'], subjects: row['subjects'])
 end
 
 Course.import columns, courses, validate: false

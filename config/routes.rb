@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'search/new'
   get 'sessions/new'
   resources :instructors
   resources :subjects
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
   get  '/courses',   to: 'static_pages#courses'
   get  '/instructors', to: 'static_pages#instructors'
   get  '/signup',  to: 'users#new'
+  get  '/search',  to: 'search#new'
   post '/signup',  to: 'users#create'
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
