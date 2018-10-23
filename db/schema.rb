@@ -10,22 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_20_191855) do
+ActiveRecord::Schema.define(version: 2018_10_21_210212) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "courses", force: :cascade do |t|
-    t.string "comment"
-    t.string "term"
     t.string "code"
     t.string "name"
     t.string "description"
-    t.integer "credits"
-    t.boolean "independent_study"
-    t.string "requirements"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "courses_subjects", id: false, force: :cascade do |t|
+    t.bigint "course_id", null: false
+    t.bigint "subject_id", null: false
+    t.index ["course_id", "subject_id"], name: "index_courses_subjects_on_course_id_and_subject_id"
+    t.index ["subject_id", "course_id"], name: "index_courses_subjects_on_subject_id_and_course_id"
   end
 
   create_table "enrollments", force: :cascade do |t|
@@ -50,7 +52,14 @@ ActiveRecord::Schema.define(version: 2018_10_20_191855) do
   create_table "subjects", force: :cascade do |t|
     t.string "name"
     t.string "abbreviation"
-    t.string "term"
+    t.string "subject_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "subjects_courses", force: :cascade do |t|
+    t.integer "course_id"
+    t.integer "subject_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

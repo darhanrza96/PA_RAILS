@@ -5,15 +5,6 @@
   <%= @course.id %>
 </p>
 
-<p>
-  <strong>Comment:</strong>
-  <%= @course.comment %>
-</p>
-
-<p>
-  <strong>Term:</strong>
-  <%= @course.term %>
-</p>
 
 <p>
   <strong>Code:</strong>
@@ -25,25 +16,7 @@
   <%= @course.name %>
 </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @course.description %>
-</p>
 
-<p>
-  <strong>Credits:</strong>
-  <%= @course.credits %>
-</p>
-
-<p>
-  <strong>Independent study:</strong>
-  <%= @course.independent_study %>
-</p>
-
-<p>
-  <strong>Requirements:</strong>
-  <%= @course.requirements %>
-</p>
 
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>

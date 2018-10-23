@@ -14,8 +14,8 @@ class CoursesController < ApplicationController
 
   # GET /courses/new
   def new
-    @course = Course.new
-  end
+      @courses_new = Course.search(params[:term]).paginate(page: params[:page])
+end
 
   # GET /courses/1/edit
   def edit
@@ -69,6 +69,6 @@ class CoursesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def course_params
-      params.require(:course).permit(:id, :comment, :term, :code, :name, :description, :credits, :independent_study, :requirements)
+      params.require(:course).permit(:id, :code, :name, :description, :term)
     end
 end
