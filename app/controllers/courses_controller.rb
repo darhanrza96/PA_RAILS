@@ -14,7 +14,7 @@ class CoursesController < ApplicationController
 
   # GET /courses/new
   def new
-      @courses_new = Course.search(params[:term]).paginate(page: params[:page])
+      
 end
 
   # GET /courses/1/edit

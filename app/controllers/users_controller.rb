@@ -16,6 +16,10 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
+    #if user is logged in then clicking the logo will go to users home page
+    if logged_in?
+      redirect_to current_user
+    end
   end
 
   # GET /users/1/edit

@@ -1,2 +1,12 @@
-<h4> Below are the relevant courses <h4>
+<center>
+<h4><b> Below are the matching courses for your search </b><h4>
+</center>
+
+<hr>
+  <!-- Render @courses new here  -->
+
+  <% @courses_new.each do |courses_new| %>
+  <p><%= courses_new.name %><p>
+    <hr>
+  <% end %>
   <hr>

@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<h4> User's Home Page <h4>
+<hr>
+
 <p>
   <strong>Name:</strong>
   <%= @user.name %>
@@ -12,3 +15,6 @@
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+<hr>
+
+<h4> Below are the courses you are currently enrolled in <h4>
