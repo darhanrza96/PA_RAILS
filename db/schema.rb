@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 2018_10_21_210212) do
   end
 
   create_table "enrollments", force: :cascade do |t|
+    t.bigint "course_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

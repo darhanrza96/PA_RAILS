@@ -1,6 +1,14 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
 
+  def enroll
+    @enrollment = Enrollment.new({course_id: params[:courses_new],user_id: current_user.id})
+    @enrollment.save
+  end
+
+  def testing
+  end
+
   # GET /courses
   # GET /courses.json
   def index
@@ -14,7 +22,7 @@ class CoursesController < ApplicationController
 
   # GET /courses/new
   def new
-      
+
 end
 
   # GET /courses/1/edit

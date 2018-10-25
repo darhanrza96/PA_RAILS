@@ -18,3 +18,7 @@
 <hr>
 
 <h4> Below are the courses you are currently enrolled in <h4>
+
+  <% current_user.courses.each do |courses| %>
+  <p><%= courses.name %><p>
+  <% end %>
