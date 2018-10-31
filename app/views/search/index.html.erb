@@ -3,8 +3,9 @@
 <h4> Search by Course: <h4>
 
 
-  <%= form_for "", url: search_result_path, role: "search", method: :get do%>
+  <%= form_tag "", url: search_path, role: "search", method: :get, :id => "courses_search",remote: true do%>
    <%= text_field_tag :term, params[:term], placeholder: "search..."%>
+
    <hr>
    <%= submit_tag ("Search"), name: nil %>
     <% end %>
@@ -13,3 +14,8 @@
 
 
 <%= collection_select(params[:subject], :subject, Subject.all, :subject_id, :name, prompt: true)%>
+<div id="courses">
+<% if !params[:term].nil? %>
+  <%= render 'courses' %>
+<% end %>
+</div>

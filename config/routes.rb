@@ -18,7 +18,8 @@ Rails.application.routes.draw do
   get  '/instructors', to: 'static_pages#instructors'
   get  '/signup',  to: 'users#new'
   get  '/search',  to: 'search#index'
-  get  '/search_result', to: 'search#new'
+  post '/search',   to:  "search#index"
+  get  '/search_result', to: 'search#index'
   post  '/enroll',    to: 'courses#enroll'
   post '/signup',  to: 'users#create'
   get    '/login',   to: 'sessions#new'

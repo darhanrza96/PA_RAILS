@@ -17,3 +17,15 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+$(function(){
+  // $("#courses th a").live("click", function()){
+  //   $.getScript(this.href);
+  //   return false;
+  // });
+  $("#courses_search").keyup(function(){
+    $.get($("#courses_search").attr("action"), $("#courses_search").serialize(), null, "script");
+
+    return false;
+  });
+});

@@ -1,0 +1,10 @@
+
+<hr>
+  <!-- Render @courses new here  -->
+
+  <% @courses_new.each do |courses_new| %>
+    <p><%= courses_new.name %></p>
+    <td><%= button_to "Enroll", "/enroll?courses_new=#{courses_new.id}" %></td>
+    <hr>
+  <% end %>
+  <hr>

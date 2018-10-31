@@ -5,6 +5,7 @@ class Course < ApplicationRecord
   has_many :subjects, :through => :subjects_courses
   belongs_to :subject
 
+
   def self.search(term)
     if term
       where('name LIKE ?', "%#{term}%")
